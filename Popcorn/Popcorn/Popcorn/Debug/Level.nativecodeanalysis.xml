@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\bande\Desktop\Popcorn project\MyPopcorn\Popcorn\Popcorn\</FILEPATH>
+      <FILENAME>Level.cpp</FILENAME>
+      <LINE>77</LINE>
+      <COLUMN>13</COLUMN>
+    </SFA>
+    <DEFECTCODE>26812</DEFECTCODE>
+    <DESCRIPTION>The enum type 'EBrick_Type' is unscoped. Prefer 'enum class' over 'enum' (Enum.3).</DESCRIPTION>
+    <FUNCTION>ALevel::Draw_Brick</FUNCTION>
+    <DECORATED>?Draw_Brick@ALevel@@AAEXPAUHDC__@@HHW4EBrick_Type@@@Z</DECORATED>
+    <FUNCLINE>77</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\bande\Desktop\Popcorn project\MyPopcorn\Popcorn\Popcorn\</FILEPATH>
+      <FILENAME>Level.cpp</FILENAME>
+      <LINE>128</LINE>
+      <COLUMN>13</COLUMN>
+    </SFA>
+    <DEFECTCODE>26812</DEFECTCODE>
+    <DESCRIPTION>The enum type 'ELetter_Type' is unscoped. Prefer 'enum class' over 'enum' (Enum.3).</DESCRIPTION>
+    <FUNCTION>ALevel::Draw_Brick_Letter</FUNCTION>
+    <DECORATED>?Draw_Brick_Letter@ALevel@@AAEXPAUHDC__@@HHW4EBrick_Type@@W4ELetter_Type@@H@Z</DECORATED>
+    <FUNCLINE>128</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>

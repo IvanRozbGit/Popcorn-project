@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\bande\Desktop\Popcorn project\MyPopcorn\Popcorn\Popcorn\</FILEPATH>
+      <FILENAME>Active_Brick.cpp</FILENAME>
+      <LINE>11</LINE>
+      <COLUMN>15</COLUMN>
+    </SFA>
+    <DEFECTCODE>26812</DEFECTCODE>
+    <DESCRIPTION>The enum type 'EBrick_Type' is unscoped. Prefer 'enum class' over 'enum' (Enum.3).</DESCRIPTION>
+    <FUNCTION>AActive_Brick::{ctor}</FUNCTION>
+    <DECORATED>??0AActive_Brick@@QAE@W4EBrick_Type@@@Z</DECORATED>
+    <FUNCLINE>11</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\bande\Desktop\Popcorn project\MyPopcorn\Popcorn\Popcorn\</FILEPATH>
+      <FILENAME>Active_Brick.cpp</FILENAME>
+      <LINE>43</LINE>
+      <COLUMN>13</COLUMN>
+    </SFA>
+    <DEFECTCODE>6387</DEFECTCODE>
+    <DESCRIPTION>'pen' could be '0':  this does not adhere to the specification for the function 'SelectObject'. </DESCRIPTION>
+    <FUNCTION>AActive_Brick::Draw</FUNCTION>
+    <DECORATED>?Draw@AActive_Brick@@QAEXPAUHDC__@@AAUtagRECT@@@Z</DECORATED>
+    <FUNCLINE>25</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>C:\Users\bande\Desktop\Popcorn project\MyPopcorn\Popcorn\Popcorn\</FILEPATH>
+        <FILENAME>Active_Brick.cpp</FILENAME>
+        <LINE>27</LINE>
+        <COLUMN>6</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'pen' is NULL</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\bande\Desktop\Popcorn project\MyPopcorn\Popcorn\Popcorn\</FILEPATH>
+        <FILENAME>Active_Brick.cpp</FILENAME>
+        <LINE>28</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\bande\Desktop\Popcorn project\MyPopcorn\Popcorn\Popcorn\</FILEPATH>
+        <FILENAME>Active_Brick.cpp</FILENAME>
+        <LINE>30</LINE>
+        <COLUMN>9</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Assume switch ( 'Brick_Type' ) resolves to the default case</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\bande\Desktop\Popcorn project\MyPopcorn\Popcorn\Popcorn\</FILEPATH>
+        <FILENAME>Active_Brick.cpp</FILENAME>
+        <LINE>43</LINE>
+        <COLUMN>13</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'pen' is an Input to 'SelectObject' (declared at c:\program files (x86)\windows kits\10\include\10.0.19041.0\um\wingdi.h:4539)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\bande\Desktop\Popcorn project\MyPopcorn\Popcorn\Popcorn\</FILEPATH>
+        <FILENAME>Active_Brick.cpp</FILENAME>
+        <LINE>43</LINE>
+        <COLUMN>13</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'pen' should not be NULL, because this is not consistent with the SAL annotation on 'SelectObject'</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\bande\Desktop\Popcorn project\MyPopcorn\Popcorn\Popcorn\</FILEPATH>
+      <FILENAME>Active_Brick.cpp</FILENAME>
+      <LINE>44</LINE>
+      <COLUMN>13</COLUMN>
+    </SFA>
+    <DEFECTCODE>6387</DEFECTCODE>
+    <DESCRIPTION>'brush' could be '0':  this does not adhere to the specification for the function 'SelectObject'. </DESCRIPTION>
+    <FUNCTION>AActive_Brick::Draw</FUNCTION>
+    <DECORATED>?Draw@AActive_Brick@@QAEXPAUHDC__@@AAUtagRECT@@@Z</DECORATED>
+    <FUNCLINE>25</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>C:\Users\bande\Desktop\Popcorn project\MyPopcorn\Popcorn\Popcorn\</FILEPATH>
+        <FILENAME>Active_Brick.cpp</FILENAME>
+        <LINE>27</LINE>
+        <COLUMN>6</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\bande\Desktop\Popcorn project\MyPopcorn\Popcorn\Popcorn\</FILEPATH>
+        <FILENAME>Active_Brick.cpp</FILENAME>
+        <LINE>28</LINE>
+        <COLUMN>8</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'brush' is NULL</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\bande\Desktop\Popcorn project\MyPopcorn\Popcorn\Popcorn\</FILEPATH>
+        <FILENAME>Active_Brick.cpp</FILENAME>
+        <LINE>30</LINE>
+        <COLUMN>9</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Assume switch ( 'Brick_Type' ) resolves to the default case</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\bande\Desktop\Popcorn project\MyPopcorn\Popcorn\Popcorn\</FILEPATH>
+        <FILENAME>Active_Brick.cpp</FILENAME>
+        <LINE>43</LINE>
+        <COLUMN>13</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\bande\Desktop\Popcorn project\MyPopcorn\Popcorn\Popcorn\</FILEPATH>
+        <FILENAME>Active_Brick.cpp</FILENAME>
+        <LINE>44</LINE>
+        <COLUMN>13</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'brush' is an Input to 'SelectObject' (declared at c:\program files (x86)\windows kits\10\include\10.0.19041.0\um\wingdi.h:4539)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\bande\Desktop\Popcorn project\MyPopcorn\Popcorn\Popcorn\</FILEPATH>
+        <FILENAME>Active_Brick.cpp</FILENAME>
+        <LINE>44</LINE>
+        <COLUMN>13</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'brush' should not be NULL, because this is not consistent with the SAL annotation on 'SelectObject'</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+</DEFECTS>

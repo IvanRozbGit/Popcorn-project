@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\bande\Desktop\Popcorn project\MyPopcorn\Popcorn\Popcorn\</FILEPATH>
+      <FILENAME>Engine.cpp</FILENAME>
+      <LINE>47</LINE>
+      <COLUMN>14</COLUMN>
+    </SFA>
+    <DEFECTCODE>26812</DEFECTCODE>
+    <DESCRIPTION>The enum type 'EKey_Type' is unscoped. Prefer 'enum class' over 'enum' (Enum.3).</DESCRIPTION>
+    <FUNCTION>AsEngine::On_Key_Down</FUNCTION>
+    <DECORATED>?On_Key_Down@AsEngine@@QAEHW4EKey_Type@@@Z</DECORATED>
+    <FUNCLINE>47</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>
