@@ -30,6 +30,11 @@ void AsPlatform::Act()
 	}
 }
 //------------------------------------------------------------------------------------------------------------
+EPlatform_State AsPlatform::GetState()
+{
+	return Platform_State;
+}
+//------------------------------------------------------------------------------------------------------------
 void AsPlatform::Set_State(EPlatform_State new_state)
 {
 	if (new_state == Platform_State)
@@ -46,7 +51,7 @@ void AsPlatform::Set_State(EPlatform_State new_state)
 		break;
 	case EPS_Roll_In:
 		X_Pos = AsConfig::Max_X_Pos;
-		Rolling_Step = Max_Rolling_Step - 1;
+		Rolling_Step = (double)Max_Rolling_Step - 1;
 		break;
 	}
 	Platform_State = new_state;
@@ -152,11 +157,18 @@ void AsPlatform::Draw_Meltdown_State(HDC hdc, RECT& paint_area)
 	int area_height = Height * AsConfig::Global_Scale + 1;
 	int y_offset;
 	int x, y;
+	int moved_column_count = 0;
+	int max_platform_y = AsConfig::Max_Y_Pos * AsConfig::Global_Scale + area_height;
 	COLORREF pixel;
 	COLORREF bg_pixel = RGB(AsConfig::BG_Color.R, AsConfig::BG_Color.G, AsConfig::BG_Color.B);
 
 	for (int i = 0; i < area_width; i++)
 	{
+		if (Meltdown_Platform_Y_Pos[i] > max_platform_y)
+			continue;
+
+		++moved_column_count;
+
 		y_offset = AsConfig::Rand(Meltdown_Speed) + 1;
 		x = Platform_Rect.left + i;
 		for (int j = 0; j < area_height; j++)
@@ -174,6 +186,9 @@ void AsPlatform::Draw_Meltdown_State(HDC hdc, RECT& paint_area)
 		}
 		Meltdown_Platform_Y_Pos[i] += y_offset;
 	}
+
+	if (!moved_column_count)
+		Set_State(EPS_Missing);
 }
 //------------------------------------------------------------------------------------------------------------
 void AsPlatform::Draw_Roll_In_State(HDC hdc, RECT& paint_area)
@@ -185,7 +200,7 @@ void AsPlatform::Draw_Roll_In_State(HDC hdc, RECT& paint_area)
 	XFORM xform, old_xform;
 
 	Clear_BG(hdc);
-	// 1. Рисуем боковые шарики
+	// 1. Рисуем шарик
 	SelectObject(hdc, Platform_Circle_Pen);
 	SelectObject(hdc, Platform_Circle_Brush);
 
